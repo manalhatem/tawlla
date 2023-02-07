@@ -4,7 +4,7 @@ import 'package:twlla/components/style/color.dart';
 import '../../../components/custom_btn.dart';
 import '../../../components/custom_text_form_field.dart';
 import '../../../components/style/size.dart';
-import '../../auth/new_password/view/new_pass.dart';
+import '../../auth/edit_pass/views/edit_pass.dart';
 class EditProfile extends StatelessWidget {
   const EditProfile({Key? key}) : super(key: key);
 
@@ -15,15 +15,21 @@ class EditProfile extends StatelessWidget {
       appBar: AppBar(
         backgroundColor: AppColor.backGroundColor,
         elevation: 0,
-        title: CustomText(text: 'تعديل بياناتي الشخصية',color: AppColor.blackColor,size: 17,
-          fontFam: FontWeight.w600,),
+        title: Padding(
+          padding: const EdgeInsets.only(top: 10.0),
+          child: CustomText(text: 'تعديل بياناتي الشخصية',color: AppColor.blackColor,size: 17,
+            fontFam: FontWeight.w600,),
+        ),
         centerTitle: true,
         actions: [
           IconButton(
             onPressed: (){
               Navigator.pop(context);
             },
-            icon: Icon(Icons.arrow_forward_ios_rounded,color: AppColor.purpleColor,),
+            icon: Padding(
+              padding: const EdgeInsets.only(top: 8.0, right: 6),
+              child: Icon(Icons.arrow_forward_ios_rounded,color: AppColor.purpleColor,),
+            ),
           ),
         ],
       ),
@@ -75,12 +81,12 @@ class EditProfile extends StatelessWidget {
               SizedBox(height: height(context)*.015,),
               CustomTextFormField(hint: '01123456789',size: 12,type: TextInputType.number,),
               SizedBox(height: height(context)*.02,),
-              CustomBtn(text: 'حفظ التعديل',ontap: (){},),
+              CustomBtn(text: 'حفظ التعديل',ontap: (){},weightt: FontWeight.bold,),
               SizedBox(height: height(context)*.18,),
               GestureDetector(
                   onTap: (){
                     Navigator.push(context, MaterialPageRoute(builder: (context){
-                      return const NewPassword();
+                      return const EditPassword();
                     }));
                   },
                   child: Center(child: CustomText(text: 'هل تريد تغير كلمة المرور ؟', color: AppColor.textColor,size: 12,))),

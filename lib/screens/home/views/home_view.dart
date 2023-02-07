@@ -4,6 +4,7 @@ import 'package:twlla/components/style/color.dart';
 import 'package:twlla/components/style/size.dart';
 
 import '../../../components/custom_text_form_field.dart';
+import '../../notification/view/notification_view.dart';
 import '../models/home_model.dart';
 import '../widgets/bottom_sheet.dart';
 import '../widgets/custom_element.dart';
@@ -24,17 +25,24 @@ class HomeView extends StatelessWidget {
               },
               child: Image.asset('assets/images/sm_icon.png')),
            actions: [
-             Padding(
-               padding: const EdgeInsets.all(10.0),
-               child: Stack(
-                 children: [
-                   Icon(Icons.notifications_none_sharp,color: AppColor.purpleColor,size: 32,),
-                   CircleAvatar(
-                     radius: 8,
-                     backgroundColor: AppColor.pinkColor,
-                     child: Text('1',style: TextStyle(fontSize: 12),),
-                   ),
-                 ],
+             GestureDetector(
+               onTap: (){
+                 Navigator.push(context, MaterialPageRoute(builder: (context){
+                   return NotificationView();
+                 }));
+               },
+               child: Padding(
+                 padding: const EdgeInsets.all(10.0),
+                 child: Stack(
+                   children: [
+                     Icon(Icons.notifications_none_sharp,color: AppColor.purpleColor,size: 32,),
+                     CircleAvatar(
+                       radius: 8,
+                       backgroundColor: AppColor.pinkColor,
+                       child: Text('1',style: TextStyle(fontSize: 12),),
+                     ),
+                   ],
+                 ),
                ),
              ),
            ],
@@ -72,16 +80,18 @@ class HomeView extends StatelessWidget {
                 ),
                 SizedBox(height: height(context)*0.008,),
                 Expanded(
-                  child: ListView.builder(
+                  child: ListView.separated(
+                    physics: const BouncingScrollPhysics(),
                       itemCount: resList.length,
                       itemBuilder: (context,index){
                     return CustomElementList(
                       img: resList[index].img, title: resList[index].title,
                       name: resList[index].name, address: resList[index].address,
 
-
                     );
-                  }),
+                  }, separatorBuilder: (BuildContext context, int index){
+                    return  SizedBox(height: height(context)*0.01,);
+                  },),
                 ),
 
 

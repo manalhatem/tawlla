@@ -3,12 +3,15 @@ import 'package:flutter/material.dart';
 import 'style/color.dart';
 import 'style/size.dart';
 class CustomTextFormField extends StatelessWidget {
-   CustomTextFormField({super.key, required this.hint,this.suffix,this.size,this.obscure=false,this.type});
+   CustomTextFormField({super.key,this.fill, this.max, required this.hint,this.suffix,this.size,this.obscure=false,this.type});
   String hint;
    Widget? suffix;
    double? size;
    bool obscure;
    TextInputType? type;
+   Color? fill;
+   int? max;
+
 
 
 
@@ -47,12 +50,13 @@ class CustomTextFormField extends StatelessWidget {
                   color: AppColor.whiteColor
               )
           )  ,
-          fillColor: AppColor.whiteColor,
+          fillColor: fill ?? AppColor.whiteColor,
           filled: true,
           suffixIcon: suffix,
         ),
         obscureText: obscure,
         keyboardType: type,
+        maxLines: max,
       ),
     );
   }
