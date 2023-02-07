@@ -89,7 +89,8 @@ class EditProfile extends StatelessWidget {
                       return const EditPassword();
                     }));
                   },
-                  child: Center(child: CustomText(text: 'هل تريد تغير كلمة المرور ؟', color: AppColor.textColor,size: 12,))),
+                  child: Center(child: CustomText(text: 'هل تريد تغير كلمة المرور ؟', color: AppColor.textColor,size: 14,fontFam: FontWeight.w500,))),
+              SizedBox(height: height(context)*.02,),
 
             ],
           ),
