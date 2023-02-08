@@ -41,6 +41,7 @@ List<RowModel> rowModel=[
   RowModel(text: 'محفظتي', select: false,icon: Icons.wallet_membership),
   RowModel(text: 'اتصل بنا', select: false,icon: Icons.settings_phone_sharp),
   RowModel(text: 'عن التطبيق', select: false,icon: Icons.app_registration),
-  RowModel(text: 'تسجيل خروج', select: false,icon: Icons.logout_outlined),
+  RowModel(text: 'الشروط والاحكام', select: false,icon: Icons.file_open_outlined),
+  RowModel(text: 'تسجيل خروج', select: false,icon: Icons.exit_to_app_rounded),
   
 ];

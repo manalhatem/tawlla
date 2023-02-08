@@ -3,8 +3,24 @@ import 'package:twlla/components/custom_text.dart';
 import 'package:twlla/components/style/color.dart';
 import 'package:twlla/components/style/size.dart';
 
+import '../../about_app/views/about_app_view.dart';
+import '../../auth/login/view/login.dart';
+import '../../auth/rules/rule_view.dart';
+import '../../contact_us/views/contact_us_view.dart';
 import '../../edite_profile/views/edit_profile_view.dart';
+import '../../favourites/views/favourite_view.dart';
+import '../../my_booking/views/my_booking_view.dart';
+import '../../my_wallt/views/my_walt_view.dart';
 import 'row_bottom.dart';
+List<Widget> myViews=[
+   MyBookingView(),
+  const FavouritesView(),
+  const MyWaltView(),
+  const ContactUsView(),
+  const AboutAppView(),
+  const RuleView(),
+  const LoginView(),
+];
 void modalBottomSheetMenu(context){
   showModalBottomSheet(
       context: context,
@@ -61,8 +77,15 @@ void modalBottomSheetMenu(context){
                       physics: const BouncingScrollPhysics(),
                         itemCount: rowModel.length,
                         itemBuilder: (context,index){
-                      return RowBottom(text: rowModel[index].text,icon: rowModel[index].icon,
-                      select: rowModel[index].select,);
+                      return GestureDetector(
+                        onTap: (){
+                          Navigator.push(context, MaterialPageRoute(builder: (_){
+                            return myViews[index];
+                          }));
+                        },
+                        child: RowBottom(text: rowModel[index].text,icon: rowModel[index].icon,
+                        select: rowModel[index].select,),
+                      );
                     }),
                   ),
 

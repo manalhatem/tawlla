@@ -20,7 +20,7 @@ class NotificationView extends StatelessWidget {
               children: [
                 Padding(
                   padding:EdgeInsets.only(top: height(context)*0.005,),
-                  child: CustomText(text: 'الإشعارات', color:AppColor.blackColor,fontFam: FontWeight.bold,size: 21,),
+                  child: CustomText(text: 'الإشعارات', color:AppColor.blackColor,fontFam: FontWeight.bold,size: 19,),
                 ),
                 SizedBox(width: width(context)*0.2,),
                 IconButton(onPressed: (){
