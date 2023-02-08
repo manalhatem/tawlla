@@ -79,7 +79,7 @@ class ConfirmBooking extends StatelessWidget {
                                               padding: EdgeInsets.symmetric(horizontal: width(context)*0.045, vertical:width(context)*0.01 ),
                                               decoration: BoxDecoration(
                                                   color: AppColor.backGroundColor,
-                                                  borderRadius: BorderRadius.circular(10)
+                                                  borderRadius: BorderRadius.circular(18)
                                               ),
                                               child: Row(
                                                 children: [

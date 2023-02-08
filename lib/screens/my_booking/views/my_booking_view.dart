@@ -78,6 +78,7 @@ class _MyBookingViewState extends State<MyBookingView> {
                     myBookings.length - widget.currentIndexx,
                     itemBuilder: (context, index){
                   return CustomElementGride(
+                    currentIndex:widget.currentIndexx,
                     img: myBookings[index].img, title: myBookings[index].title,
                     name: myBookings[index].name, address: myBookings[index].address,
 

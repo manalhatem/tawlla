@@ -3,21 +3,22 @@ import 'package:flutter/material.dart';
 import '../../../components/custom_text.dart';
 import '../../../components/style/color.dart';
 import '../../../components/style/size.dart';
-import '../../res_detail/views/res_details.dart';
+import '../views/detail_booking.dart';
 class CustomElementGride extends StatelessWidget {
-  CustomElementGride({required this.img, required this.title, required this.name, required this.address, super.key});
+  CustomElementGride({required this.currentIndex,required this.img, required this.title, required this.name, required this.address, super.key});
   String img;
   String title;
   String name;
   String address;
+  int currentIndex;
 
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: (){
-        // Navigator.push(context, MaterialPageRoute(builder: (context){
-        //   return ResDetails(img: img, address: address, name: name,);
-        // }));
+        Navigator.push(context, MaterialPageRoute(builder: (context){
+          return DetailBooking(img: img, name: name,currentIndex: currentIndex,);
+        }));
       },
       child: Stack(
         children: [

@@ -40,7 +40,7 @@ class RuleView extends StatelessWidget {
                       child: SizedBox(
                         width: width(context)*0.9,
                         child: CustomText(text: 'هذا النص هو مثال لنص يمكن أن يستبدل في نفس المســـاحة لقد تم توليد هذا النص من مولد النــــــص العربى، حيث يمكنك أن تولد مثل هذا النص أو العديد من النصـــــوص الأخرى إضافة إلى زيادة عدد الحروف التى يولدها التطبيق إذا كنت تحتاج إلى عدد أكبر من الفقـــــرات يتيح لك مولد النــــــــص العربى زيادة عدد الفقرات كمــــــا تريد، النص لن يبدو مقسما ولا يحوي أخطاء لغوية، مولد النص العربى مفيد لمصممي المواقع على وجه الخصوص، حيث يحتاج العميل فى كثير من الأحـــيان أن يطلع على صورة حقيقية لتصميم الموقع',
-                          color: AppColor.textColor,size: 14,align: TextAlign.center,fontFam: FontWeight.w500,),
+                          color: AppColor.textColor,size: 14,align: TextAlign.right,fontFam: FontWeight.w500,),
                       )
                   ),
                   SizedBox(height: height(context)*.02,),
@@ -48,7 +48,7 @@ class RuleView extends StatelessWidget {
                       child: SizedBox(
                         width: width(context)*0.9,
                         child: CustomText(text: 'هذا النص هو مثال لنص يمكن أن يستبدل في نفس المســـاحة لقد تم توليد هذا النص من مولد النــــــص العربى، حيث يمكنك أن تولد مثل هذا النص أو العديد من النصـــــوص الأخرى إضافة إلى زيادة عدد الحروف التى يولدها التطبيق إذا كنت تحتاج إلى عدد أكبر من الفقـــــرات يتيح لك مولد النــــــــص العربى زيادة عدد الفقرات كمــــــا تريد، النص لن يبدو مقسما ولا يحوي أخطاء لغوية، مولد النص العربى مفيد لمصممي المواقع على وجه الخصوص، حيث يحتاج العميل فى كثير من الأحـــيان أن يطلع على صورة حقيقية لتصميم الموقع',
-                          color: AppColor.textColor,size: 14,align: TextAlign.center,fontFam: FontWeight.w500,),
+                          color: AppColor.textColor,size: 14,align: TextAlign.right,fontFam: FontWeight.w500,),
                       )
                   ),
 
